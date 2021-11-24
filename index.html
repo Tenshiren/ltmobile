@@ -22,6 +22,17 @@
 
     <script src="js/modernizr.custom.js"></script>
 
+    <script>
+        const openLink = (txt) => {
+            // github
+            const id = window.location.search.replace('?', '');
+            // local
+            //const id = window.location.search.replace('?id=', '');
+            const link = `https://canvas.dntu.edu.vn/courses/${id}/${txt}`
+            window.open(link, "_blank");
+        }
+    </script>
+
 </head>
 
 <body>
