@@ -22,6 +22,18 @@
 
     <script src="js/modernizr.custom.js"></script>
 
+    <script>
+
+        const openLink = (txt) => {
+            // github
+            const id = window.location.search.replace('?', '');
+            // local
+            //const id = window.location.search.replace('?id=', '');
+            const link = `https://canvas.dntu.edu.vn/courses/${id}/${txt}`
+            window.open(link, "_blank");
+        }
+    </script>
+
 </head>
 
 <body>
@@ -92,7 +104,8 @@
             <div class="circle"></div>
             <div class="row">
                 <!-- Page -->
-                <a href="https://canvas.dntu.edu.vn/courses/49/assignments" target="_blank">
+
+                <a href="#" onclick="openLink('pages');">
                     <div class="col-sm-4 wow animated fadeInLeft">
                         <div class="special-icon">
                             <i class="fa fa-file-text-o fa-5x"></i>
@@ -104,7 +117,7 @@
                     </div>
                 </a>
                 <!-- Files -->
-                <a href="https://canvas.dntu.edu.vn/courses/49/assignments" target="_blank">
+                <a href="#" onclick="openLink('files');">
                     <div class="col-sm-4 animation-box wow bounceIn animated">
                         <div class="special-icon">
                             <i class="fa fa-book fa-5x"></i>
@@ -113,7 +126,7 @@
                     </div>
                 </a>
                 <!-- Assignments -->
-                <a href="https://canvas.dntu.edu.vn/courses/49/assignments" target="_blank">
+                <a href="#" onclick="openLink('assignments');">
                     <div class="col-sm-4 wow animated fadeInRight">
                         <div class="special-icon">
                             <i class="fa fa-pencil fa-5x"></i>
@@ -213,6 +226,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/script.js"></script>
+
     <script>
         new WOW().init();
     </script>
