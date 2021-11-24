@@ -22,18 +22,6 @@
 
     <script src="js/modernizr.custom.js"></script>
 
-    <script>
-
-        const openLink = (txt) => {
-            // github
-            const id = window.location.search.replace('?', '');
-            // local
-            //const id = window.location.search.replace('?id=', '');
-            const link = `https://canvas.dntu.edu.vn/courses/${id}/${txt}`
-            window.open(link, "_blank");
-        }
-    </script>
-
 </head>
 
 <body>
@@ -43,13 +31,20 @@
     <!-- <div id="preloader"></div> -->
     <!-- HHHHHHHHHHHHHHHHHH        Header          HHHHHHHHHHHHHHHH -->
     <section id="header" class="header">
-        <div>
+        <div class="top-bar hidden">
             <div class="container">
                 <div class="navigation" id="navigation-scroll">
                     <div class="row">
                         <div class="col-md-11 col-xs-10">
                             <a href="index.html"><span id="logo">Lập
                                     trình <strong class="strong">Mobile</strong></span></a>
+                        </div>
+                        <div class="col-md-1 col-xs-2">
+                            <p class="nav-button">
+                                <button id="trigger-overlay" type="button">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                            </p>
                         </div>
                     </div><!-- /.row -->
                 </div><!-- /.navigation -->
@@ -66,9 +61,10 @@
                     </div>
                     <div class="col-md-6">
                         <div class="banner-text">
-                            <h2 class="animation-box wow bounceIn animated"><strong class="strong">Chào mừng đến
-                                    với</strong><br>
-                                lớp học</h2>
+                            <h2 class="animation-box wow bounceIn animated">Chào mừng đến lớp học
+                                <br><br>
+                                <strong class="strong">Lập trình Mobile</strong>
+                            </h2>
                             <p>
                                 Lập trình phần mềm cho các thiết bị di động.
                                 <br>
@@ -93,7 +89,6 @@
         <!-- /.container -->
     </section>
     <!-- /#header -->
-
 
 
     <!-- HHHHHHHHHHHHHHHHHH        Speciality         HHHHHHHHHHHHHHHH -->
@@ -222,7 +217,81 @@
         </div> <!-- /.container -->
     </section> <!-- /#contact -->
 
+    <!-- HHHHHHHHHHHHHHHHHH      Screenshots    HHHHHHHHHHHHHHHH -->
 
+    <section id="gallery" class="wrapper">
+        <div class="container">
+            <h2 class="animation-box wow bounceIn animated">ĐỒ ÁN CÁC KHÓA</h2>
+            <div class="virticle-line"></div>
+            <div class="circle"></div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="screenshots" class="owl-carousel owl-theme">
+                        <a href="img/1.jpg" class="item wow flipInY animated animated"
+                            data-lightbox-gallery="screenshots">
+                            <img src="img/1.jpg" class="img_res wow animated zoomIn" alt="">
+                        </a>
+                        <a href="img/2.jpg" class="item wow flipInY animated animated"
+                            data-lightbox-gallery="screenshots">
+                            <img src="img/2.jpg" class="img_res wow animated zoomIn" alt="">
+                        </a>
+                        <a href="img/3.jpg" class="item wow flipInY animated animated"
+                            data-lightbox-gallery="screenshots">
+                            <img src="img/3.jpg" class="img_res wow animated zoomIn" alt="">
+                        </a>
+                        <a href="img/4.jpg" class="item wow flipInY animated animated"
+                            data-lightbox-gallery="screenshots">
+                            <img src="img/4.jpg" class="img_res wow animated zoomIn" alt="">
+                        </a>
+                        <a href="img/1.jpg" class="item wow flipInY animated animated"
+                            data-lightbox-gallery="screenshots">
+                            <img src="img/1.jpg" class="img_res wow animated zoomIn" alt="">
+                        </a>
+                        <a href="img/2.jpg" class="item wow flipInY animated animated"
+                            data-lightbox-gallery="screenshots">
+                            <img src="img/2.jpg" class="img_res wow animated zoomIn" alt="">
+                        </a>
+                        <a href="img/3.jpg" class="item wow flipInY animated animated"
+                            data-lightbox-gallery="screenshots">
+                            <img src="img/3.jpg" class="img_res wow animated zoomIn" alt="">
+                        </a>
+                        <a href="img/4.jpg" class="item wow flipInY animated animated"
+                            data-lightbox-gallery="screenshots">
+                            <img src="img/4.jpg" class="img_res wow animated zoomIn" alt="">
+                        </a>
+                        <a href="img/1.jpg" class="item wow flipInY animated animated"
+                            data-lightbox-gallery="screenshots">
+                            <img src="img/1.jpg" class="img_res wow animated zoomIn" alt="">
+                        </a>
+                        <a href="img/2.jpg" class="item wow flipInY animated animated"
+                            data-lightbox-gallery="screenshots">
+                            <img src="img/2.jpg" class="img_res wow animated zoomIn" alt="">
+                        </a>
+                    </div>
+                    <div class="customNavigation row">
+                        <a class="btn prev gallery-nav wow animated bounceInLeft"><i class="fa fa-chevron-left"></i></a>
+                        <a class="btn next gallery-nav wow animated bounceInRight"><i
+                                class="fa fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- HHHHHHHHHHHHHHHHHH        Open/Close          HHHHHHHHHHHHHHHH -->
+    <div class="overlay overlay-hugeinc">
+        <button type="button" class="overlay-close">Close</button>
+        <nav>
+            <ul>
+                <li class="hideit"><a href="#header">Home</a></li>
+                <li class="hideit"><a href="#speciality">Nội dung</a></li>
+                <li class="hideit"><a href="#gallery">Đồ án các khóa</a></li>
+            </ul>
+        </nav>
+    </div>
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/owl-carousel.js"></script>
@@ -232,7 +301,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/script.js"></script>
-
     <script>
         new WOW().init();
     </script>
