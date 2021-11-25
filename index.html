@@ -22,14 +22,55 @@
 
     <script src="js/modernizr.custom.js"></script>
 
-    <script>
+    <!-- <script>
         const openLink = (txt) => {
             // github
             const id = window.location.search.replace('?', '');
             // local
             //const id = window.location.search.replace('?id=', '');
-            const link = `https://canvas.dntu.edu.vn/courses/${id}/${txt}`
-            window.open(link, "_blank");
+            if (txt == 'decuong') {
+                const link = `https://canvas.dntu.edu.vn/courses/${id}/pages/de-cuong`
+                window.open(link, "_blank");
+            }
+            else if (txt == 'teams') {
+                if (id == 112)
+                    const link = `https://teams.microsoft.com/l/team/19%3aLE4YfLPTnt4k4m-wIUMAtXjYCu1aaGJlAT1OF-RqBwo1%40thread.tacv2/conversations?groupId=952247fb-6c72-4489-a76a-349dc0029709&tenantId=6e0182cd-b36b-4286-b337-e3811b35f106`
+                if (id == 113)
+                    const link = `https://teams.microsoft.com/l/team/19%3aHQxk9wyudcZ_uo8X2t2fz21jx7O0Ku1tMap-dua553I1%40thread.tacv2/conversations?groupId=134264b1-d16d-496d-9a4e-751a49678d0c&tenantId=6e0182cd-b36b-4286-b337-e3811b35f106`
+                if (id == 114)
+                    const link = `https://teams.microsoft.com/l/team/19%3aTt3eXXdFY4zym6_mQvD44WrZDEedp4_H9atYz_AahZM1%40thread.tacv2/conversations?groupId=99379303-256a-4313-a4c3-d2bd1c27d83c&tenantId=6e0182cd-b36b-4286-b337-e3811b35f106`
+                window.open(link, "_blank");
+            }
+            else {
+                const link = `https://canvas.dntu.edu.vn/courses/${id}/${txt}`
+                window.open(link, "_blank");
+            }
+
+        }
+    </script> -->
+
+    <script>
+
+        const openLink = (txt) => {
+            // github
+            const id = window.location.search.replace('?', '');
+            // local
+            //const id = window.location.search.replace('?id=', '');
+            if (txt == 'decuong') {
+                const link = `https://canvas.dntu.edu.vn/courses/${id}/pages/de-cuong`
+                window.open(link, "_blank");
+            }
+            if (txt == 'teams') {
+                if (id == 112) { var link = `https://teams.microsoft.com/l/team/19%3aLE4YfLPTnt4k4m-wIUMAtXjYCu1aaGJlAT1OF-RqBwo1%40thread.tacv2/conversations?groupId=952247fb-6c72-4489-a76a-349dc0029709&tenantId=6e0182cd-b36b-4286-b337-e3811b35f106` }
+                if (id == 113) { var link = `https://teams.microsoft.com/l/team/19%3aHQxk9wyudcZ_uo8X2t2fz21jx7O0Ku1tMap-dua553I1%40thread.tacv2/conversations?groupId=134264b1-d16d-496d-9a4e-751a49678d0c&tenantId=6e0182cd-b36b-4286-b337-e3811b35f106` }
+                if (id == 114) { var link = `https://teams.microsoft.com/l/team/19%3aTt3eXXdFY4zym6_mQvD44WrZDEedp4_H9atYz_AahZM1%40thread.tacv2/conversations?groupId=99379303-256a-4313-a4c3-d2bd1c27d83c&tenantId=6e0182cd-b36b-4286-b337-e3811b35f106` }
+                window.open(link, "_blank");
+            }
+            else {
+                const link = `https://canvas.dntu.edu.vn/courses/${id}/${txt}`
+                window.open(link, "_blank");
+            }
+
         }
     </script>
 
@@ -109,9 +150,9 @@
             <div class="virticle-line"></div>
             <div class="circle"></div>
             <div class="row">
-                <!-- Page -->
+                <!-- Đề cương -->
 
-                <a href="#" onclick="openLink('pages');">
+                <a href="#" onclick="openLink('decuong');">
                     <div class="col-sm-4 wow animated fadeInLeft">
                         <div class="special-icon">
                             <i class="fa fa-file-text-o fa-5x"></i>
@@ -128,7 +169,7 @@
                         <div class="special-icon">
                             <i class="fa fa-book fa-5x"></i>
                         </div>
-                        <h3>Giáo trình</h3>
+                        <h3>Bài giảng</h3>
                     </div>
                 </a>
                 <!-- Assignments -->
@@ -138,6 +179,40 @@
                             <i class="fa fa-pencil fa-5x"></i>
                         </div>
                         <h3>Bài tập</h3>
+                    </div>
+                </a>
+            </div> <!-- /.row -->
+
+            <div class="row">
+                <!-- Page -->
+
+                <a href="#" onclick="openLink('modules');">
+                    <div class="col-sm-4 wow animated fadeInLeft">
+                        <div class="special-icon">
+                            <i class="fa fa-file-text-o fa-5x"></i>
+                        </div>
+                        <h3>Modules</h3>
+                        <!-- <p>
+
+                        </p> -->
+                    </div>
+                </a>
+                <!-- MS Teams -->
+                <a href="#" onclick="openLink('teams');">
+                    <div class="col-sm-4 animation-box wow bounceIn animated">
+                        <div class="special-icon">
+                            <i class="fa fa-book fa-5x"></i>
+                        </div>
+                        <h3>Microsoft Teams</h3>
+                    </div>
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/groups/587231672383506" target="blank">
+                    <div class="col-sm-4 wow animated fadeInRight">
+                        <div class="special-icon">
+                            <i class="fa fa-pencil fa-5x"></i>
+                        </div>
+                        <h3>Facebook lớp</h3>
                     </div>
                 </a>
             </div> <!-- /.row -->
