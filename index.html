@@ -55,11 +55,11 @@
             // github
             const id = window.location.search.replace('?', '');
             // local
-            //const id = window.location.search.replace('?id=', '');
-            if (txt == 'decuong') {
-                const link = `https://canvas.dntu.edu.vn/courses/${id}/pages/de-cuong`
-                window.open(link, "_blank");
-            }
+            // id = window.location.search.replace('?id=', '');
+            // if (txt == 'decuong') {
+            //     const link = `https://canvas.dntu.edu.vn/courses/${id}/pages/de-cuong`
+            //     window.open(link, "_blank");
+            // }
             if (txt == 'teams') {
                 if (id == 2417) { var link = `https://teams.microsoft.com/l/team/19%3apIj3WpWqItHgBCE6lzv5rugSnds-K0fsvWewlBLf78U1%40thread.tacv2/conversations?groupId=bab32310-731b-4c6f-9721-caedcbc316de&tenantId=6e0182cd-b36b-4286-b337-e3811b35f106` }
                 if (id == 2418) { var link = `https://teams.microsoft.com/l/team/19%3ank1kfe0wro-tQd_jbkh--XBEWMj7qN7iXKT6X853Wo81%40thread.tacv2/conversations?groupId=0d9bfe85-96c0-457f-b9e5-f4ad09ecfe7c&tenantId=6e0182cd-b36b-4286-b337-e3811b35f106` }
@@ -153,7 +153,7 @@
             <div class="row">
                 <!-- Đề cương -->
 
-                <a href="#" onclick="openLink('decuong');">
+                <a href="#" onclick="openLink('pages/de-cuong');">
                     <div class="col-sm-4 wow animated fadeInLeft">
                         <div class="special-icon">
                             <i class="fa fa-file-text-o fa-5x"></i>
@@ -165,7 +165,7 @@
                     </div>
                 </a>
                 <!-- Files -->
-                <a href="#" onclick="openLink('files');">
+                <a href="#" onclick="openLink('pages/bai-giang');">
                     <div class="col-sm-4 animation-box wow bounceIn animated">
                         <div class="special-icon">
                             <i class="fa fa-book fa-5x"></i>
